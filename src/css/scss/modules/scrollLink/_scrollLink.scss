@@ -1,0 +1,67 @@
+/*----------------------------------------------------------------------
+ Scroll Link Styles
+----------------------------------------------------------------------*/
+.scrollLink {
+	width: 100%;
+	min-height: 80px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	text-align: center;
+}
+
+.scrollLink a {
+    position: relative;
+    color: $brand_dark;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color .2s ease-in;
+}
+
+.scrollLink a:hover,
+.scrollLink a:focus {
+    color: $brand_light;
+    text-decoration: none;
+}
+
+.scrollLink a:after {
+	display: block;
+	content: "";
+    background: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 0;
+    border-bottom: 5px solid $brand_dark;
+    border-right: 5px solid $brand_dark;
+    transform: rotate(37.5deg) skew(-15deg);
+    transition: all .2s ease-out;
+}
+
+.scrollLink a:hover:after,
+.scrollLink a:focus:after {
+	border-bottom: 5px solid $brand_light;
+    border-right: 5px solid $brand_light;
+    transform: translateY(3px) rotate(37.5deg) skew(-15deg);
+}
+
+.scrollLink_white a {color: $white;}
+
+.scrollLink_white a:hover,
+.scrollLink_white a:focus {color: $gray_light;}
+
+.scrollLink_white a:after {
+    border-bottom: 5px solid $white;
+    border-right: 5px solid $white;
+}
+
+.scrollLink_white a:hover:after,
+.scrollLink_white a:focus:after {
+	border-bottom: 5px solid $gray_light;
+    border-right: 5px solid $gray_light;
+}

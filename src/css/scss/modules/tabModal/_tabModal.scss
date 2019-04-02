@@ -1,0 +1,55 @@
+/*----------------------------------------------------------------------
+ Tab Modal Styles
+----------------------------------------------------------------------*/
+.tabModal {
+	margin-bottom: 20px;
+}
+
+.tabModal-trigger {
+	
+	li {
+		display: inline-block;
+		margin: 0 10px 20px;
+	}
+
+	a {min-width: 260px;}
+}
+
+.tabModal-content {
+	display: none;
+	height: 100%;
+	width: 100%;
+	padding: 150px 10px 80px;
+	background: $brand_dark;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.tabModal-content-item {
+	display: none;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.tabModal-content-close {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	border: 2px solid $white;
+	border-radius: 50%;
+	position: absolute;
+	top: 96px;
+	right: 20px;
+	color: $white;
+	font-size: 40px;
+	line-height: .8;
+	cursor: pointer;
+	transition: .1s;
+}
+
+.tabModal-content-close:hover,
+.tabModal-content-close:focus {
+	transform: scale(1.2);
+}

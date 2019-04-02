@@ -1,0 +1,74 @@
+/*----------------------------------------------------------------------
+ Button - Yay, buttons!
+----------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    min-width: 200px;
+    padding: 20px;
+    position: relative;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 33px;
+    z-index: 1;
+    font-family: $font_secondary;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    text-decoration: none;
+    //background: $brand_light;
+}
+
+.btn:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: $brand_dark;
+    border-radius: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn:hover.btn:after {opacity: .6;}
+
+.btn_sm {
+    min-width: 120px;
+    padding: 8px 10px;
+    font-size: 16px;
+}
+
+.btn_secondary {
+    border: 2px solid $gray_dark;
+    color: $gray_dark;
+    background: $white;
+}
+
+.btn_secondary:hover,
+.btn_secondary:focus {
+    background: $gray_light;
+}
+
+.btn:disabled,
+[disabled="disabled"],
+.btn.inActive {
+    border: 2px solid #cfe0e6;
+    box-shadow: none;
+    color: #cfe0e6;
+    background: #f7fbfc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn_pushTop {margin-top: 20px;}
+.btn_pushBtm {margin-bottom: 20px;}
+.btn_pushBtmSm {margin-bottom: 10px;}

@@ -1,0 +1,27 @@
+// ------------------------------------------------------------------
+// Header
+// ------------------------------------------------------------------
+$header_height: 56px;
+
+.header {
+	@include clearfix();
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: $header_height;
+	margin: 0;
+	z-index: 100;
+	padding: 10px;
+	background: $white;
+	font-size: 12px;
+}
+
+.header-logo img {
+	width: 140px;
+	float: left;
+}
+
+.header-menu {
+	float: right;
+}
